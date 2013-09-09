@@ -1,0 +1,9 @@
+﻿#忽略tags文件
+.tags
+#忽略缓存文件
+compile/
+cache/
+Img/
+imgs/
+
+

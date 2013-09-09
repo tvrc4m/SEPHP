@@ -1,0 +1,7 @@
+
+RewriteEngine On
+
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^ju\.com$ [NC]
+RewriteRule ^(.*)$ http://www.ju.com/$1 [QSA,R=301,L]
