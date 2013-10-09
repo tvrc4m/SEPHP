@@ -151,3 +151,17 @@ class MongoModel extends Model{
 	}
 	
 }
+
+class RedisModel extends Model{
+
+	protected function init(){
+		$this->_db=DBRedis::Instance();
+	}
+
+	public function __call($method,$args){
+		if(method_exists($this->_db->getRedis(),$method)) 
+			return call_user_func_array(array($this->_db->getRedis(),$method),$args);
+		else
+			exit('no this '.$method);
+	}
+}

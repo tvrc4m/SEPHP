@@ -318,3 +318,21 @@ class DBMongo extends DB{
 	}
 
 }
+
+class DBRedis extends DB{
+
+	CONST HOST='localhost',PORT=6379,TIMEOUT=10;
+		
+	protected $_redis=null;
+
+	public function getRedis(){
+		$this->_redis===null && $this->connect();
+		return $this->_redis;
+	}
+	
+	protected function connect($host=self::HOST,$port=self::PORT,$timeout=self::TIMEOUT){
+		$this->_redis=new Redis();
+		$this->_redis->pconnect($host,$port,$timeout);
+	}
+
+}
