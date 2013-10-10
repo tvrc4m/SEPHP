@@ -42,7 +42,7 @@ class DBMysql extends DB{
 	
 	CONST HOST='localhost';
 	CONST USER='fastty';
-	CONST PWD='tvrc4m@!fastty';
+	CONST PWD='';
 	CONST DB='fastty';
 	CONST CHARSET='UTF8';
 	
@@ -191,7 +191,6 @@ class DBMongo extends DB{
 	
 	CONST HOST='mongodb://localhost:27017';
 
-	#CONST HOST='mongodb://fastty2013:fastty2013mongodb@localhost:27017/fastty';
 	//CONST HOST='mongodb://fred:foobar@localhost';
 	//CONST HOST='mongodb://fred:foobar@localhost/baz';	#Connect and login to the "baz" database as user "fred" with password "foobar":
 	
