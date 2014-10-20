@@ -1,0 +1,139 @@
+if (!-e $request_filename){
+	
+		
+	#rewrite ^/?$ /index.php?app=index last;
+	rewrite ^/?$ /index.php?app=today&act=index&f=Cu last;
+	#登录
+	rewrite ^/category.* http://www.fastty.com/shop/item/cu/today/ last;
+	rewrite ^/login\.html$ /index.php?app=login&act=index last;
+
+	rewrite ^/login/local$ /index.php?app=login&act=logining last;
+
+	rewrite ^/logining\.html$ /index.php?app=login&act=local last;
+
+	#个人中心
+	
+	rewrite ^/login/(sina|qq|qqwb|douban)$ /index.php?app=login&act=third&type=$1 last;
+
+	rewrite ^/login/(sina|qq|qqwb|douban)/bind$ /index.php?app=login&act=bind&type=$1 last;
+
+	rewrite ^/login/callback$ /index.php?app=login&act=callback last;
+
+	rewrite ^/login/needlogin$ /index.php?app=login&act=needlogin last;
+
+	rewrite ^/logout$ /index.php?app=logout last;
+
+	rewrite ^/register/uniqueName\.html$ /index.php?app=register&act=uniqueName last;
+
+	rewrite ^/register/uniqueEmail\.html$ /index.php?app=register&act=uniqueEmail last;
+
+	rewrite ^/register\.html$ /index.php?app=register last;
+
+	rewrite ^/sign\.html$ /index.php?app=register&act=sign last;
+
+	rewrite ^/register/open\.html$ /index.php?app=register&act=open last;
+
+	rewrite ^/registering\.html$ /index.php?app=register&act=local last;
+
+	rewrite ^/guide/follow\.html$ /index.php?app=guide&act=follow last;
+
+	rewrite ^/guide/follow\.ajax$ /index.php?app=ajax&act=follow last;
+
+	rewrite ^/guide/find\.html$ /index.php?app=guide&act=find last;
+
+	rewrite ^/guide/find\.ajax$ /index.php?app=ajax&act=find last;
+
+	rewrite ^/guide/box\.html$ /index.php?app=guide&act=box last;
+
+	rewrite ^/guide/box\.ajax$ /index.php?app=ajax&act=box last;
+
+	rewrite ^/guide/bind/(sina|qq)$ /index.php?app=guide&act=bind&type=$1 last;
+
+	rewrite ^/login/bind\.html$ /index.php?app=login&act=bind last;
+
+	rewrite ^/my/fav/?$ /index.php?app=favorite&act=index last;
+
+	rewrite ^/shop/hot/?$ /index.php?app=hot&act=index&f=shop last;
+
+	rewrite ^/shop/follow.ajax$ /index.php?app=ajax&act=followshop&f=shop last;
+
+	rewrite ^/shop/unfollow.ajax$ /index.php?app=ajax&act=unfollowshop&f=shop last;
+
+	rewrite ^/shop/box/follow.ajax$ /index.php?app=ajax&act=followbox&f=shop last;
+
+	rewrite ^/shop/box/unfollow.ajax$ /index.php?app=ajax&act=unfollowbox&f=shop last;
+
+	rewrite ^/shop/(\w+)/?$ /index.php?app=index&act=index&f=shop&sid=$1 last;
+
+	rewrite ^/shop/(\w+)/items/?$ /index.php?app=item&act=index&f=shop&sid=$1 last;
+
+	rewrite ^/shop/box/(\w+)/?$ /index.php?app=box&act=index&f=shop&bid=$1 last;
+
+	rewrite ^/shop/item/comment/add.json$ /index.php?app=json&act=addComment&f=SItem last;
+
+	rewrite ^/shop/item/like.ajax$ /index.php?app=ajax&act=like&f=SItem last;
+
+	rewrite ^/shop/item/unlike.ajax$ /index.php?app=ajax&act=unlike&f=SItem last;
+
+	rewrite ^/shop/item/want.ajax$ /index.php?app=ajax&act=want&f=SItem last;
+
+	rewrite ^/shop/item/fav.ajax$ /index.php?app=ajax&act=fav&f=SItem last;
+	
+	rewrite ^/shop/item/detail.html$ /index.php?app=detail&act=index&f=SItem last;
+	
+	rewrite ^/shop/item/detail/(\d+)/?$ /index.php?app=detail&act=index&f=SItem&id=$1 last;
+
+	rewrite ^/shop/item/comment.html$ /index.php?app=json&act=itemComment&f=SItem last;
+
+	rewrite ^/shop/item/redirect.html$ /index.php?app=redirect&act=index&f=SItem last;
+
+	rewrite ^/shop/item/redirect/(\d+)/$ /index.php?app=redirect&act=index&f=SItem&id=$1 last;
+
+	rewrite ^/shop/item/search/?$ /index.php?app=search&act=index&f=SItem last;
+
+	rewrite ^/spider/?$ /index.php?app=spider&act=index&f=SItem last;
+
+	rewrite ^/new/?$ /index.php?app=index&act=index last;
+
+	rewrite ^/my/?$ /index.php?app=index&act=index&f=user last;
+
+	rewrite ^/my/setting/?$ /index.php?app=setting&act=index&f=user last;
+
+	rewrite ^/my/order/?$ /index.php?app=order&act=index&f=user last;
+
+	rewrite ^/my/tixian/?$ /index.php?app=Deposit&act=index&f=user last;
+
+	rewrite ^/brand/?$ /index.php?app=index&act=index&f=brand last;
+
+	rewrite ^/brand/cat/?$ /index.php?app=cat&act=index&f=brand last;
+
+	rewrite ^/brand/cat/(\d+)/?$ /index.php?app=cat&act=index&f=brand&cid=$1 last;
+
+	rewrite ^/brand/(\d+)/?$ /index.php?app=detail&act=index&f=brand&id=$1 last;
+
+	rewrite ^/discover/?$ /index.php?app=index&act=index&f=discover last;
+
+	rewrite ^/discover/item/like/?$ /index.php?app=like&act=index&f=discover last;
+
+	rewrite ^/discover/item/comment/?$ /index.php?app=comment&act=index&f=discover last;
+
+	rewrite ^/discover/item/want/?$ /index.php?app=want&act=index&f=discover last;
+
+	rewrite ^/shop/item/cu/today/?$ /index.php?app=today&act=index&f=Cu last;
+
+	rewrite ^/cu/today/?$ /index.php?app=today&act=index&f=Cu last;
+
+	rewrite ^/cu/?$ /index.php?app=cat&act=index&f=Cu last;
+
+	rewrite ^/cu/cat/?$ /index.php?app=cat&act=index&f=Cu last;
+
+	rewrite ^/cu/cat/(\d+)/?$ /index.php?app=cat&act=index&f=Cu&cid=$1 last;
+
+	rewrite ^/box/(\d+)/?$ /index.php?app=list&act=index&f=Box&bid=$1 last;
+
+	rewrite ^/404.html$ /index.php?app=tpl&act=_404 last;
+
+
+
+}
+

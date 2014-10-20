@@ -1,0 +1,6 @@
+数据库roam
+roamcc   ----全部权限
+roamcc@!812988018
+
+roamcoreseek	---只读权限
+roamcoreseek@!read 
